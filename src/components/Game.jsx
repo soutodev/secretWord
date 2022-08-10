@@ -62,9 +62,10 @@ const Game = ({
       </div>
       <div className="wrongLetterContainer">
         <p>Letras já utilizadas:</p>
-            {wrongLetters.map((letter, i) => {
+            {/* Quando se há redenrização de JSX no MAP, deve ser envolvido entre (  )  */}
+            {wrongLetters.map((letter, i) => (
               <span key={i}>{letter}, </span>
-            })}
+            ))}
       </div>
     </div>
   )
